@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+     <!--links para biblioteca de máscara JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        //pwa -  registrar o service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('Service worker registered: ', registration);
+          }, function(err) {
+            console.log('Service worker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de mulheres</h1>
+        <form action="cadastro_mulheres.php" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" placeholder="Nome completo"required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com">
+            <br><br>
+            <label for="instagram">Instagram:</label>
+            <input type="instagram" id="instagram" name="instagram" placeholder="seu perfil">
+            <br><br>
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="fone" placeholder="84 98756-4940" required>
+            <br><br>
+            <label for="age">Idade:</label>
+            <input type="text" id="age" name="idade" placeholder="apenas dois números ex.: 05" required>
+            <br><br>
+            <label for="birth">Nascimento:</label>
+            <input type="date" id="birth" name="nascimento" placeholder="ano-mês-dia"required>
+            <br><br>
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" placeholder="Exemplo: 45"required>
+            <br><br>
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" name="altura" placeholder="Exemplo: 160"required>
+            <br><br>
+            <label for="idade_corporal">Idade corporal:</label>
+            <input type="text" id="idade_corporal" name="idade_corporal" placeholder="Exemplo: 22"required>
+            <br><br>
+            <input class="button" type="submit" value="Cadastrar" style="background-color: rgb(44, 4, 43);">
+          </form>
+          <script>
+            $(document).ready(function(){
+              $('#phone').mask('(00) 0000-0000');
+              $('#age').mask('00');
+              $('#birth').mask('0000-00-00');
+              $('#email').mask('A', {
+                translation: {
+                  'A': {pattern: /[\w@\-.+]/, recursive: true}
+                }
+              });
+              $('#peso').mask('00,00');
+              $('#altura').mask('0,00');
+              $('#idade_corporal').mask('00');
+             /* $('#altura').on('input', function() {
+                var valor = parseFloat($(this).val().replace(',', '.')); // Converter para número
+
+                if (isNaN(valor)) {
+                // Se o valor não for um número válido, limpar o campo
+                $(this).val('');
+                } else {
+                // Se o valor for um número válido, verificar se está próximo a 1 ou 2
+                if (valor < 0.5 || valor > 2.5) {
+                    alert('Insira um valor próximo a 1 ou 2 para a altura. Por exemplo: 1,60');
+                }
+                }
+              });*/
+                });
+          </script> 
+</body>
+</html>

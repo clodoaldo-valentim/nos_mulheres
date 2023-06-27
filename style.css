@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dd7aea;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  form {
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #46032f;
+    width: 50%;
+    
+  }
+  .container_painel {
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #46032f;
+    width: 50%;
+    
+  }
+  /*O este é teste para os botões */
+  .botao_painel {
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+  
+    
+  }
+  /*fim do teste */
+  input, select, textarea {
+    flex:1;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #ccc;
+    font-size: 14px;
+    width: 60%;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .button {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 4px;
+    word-spacing: 8px;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgb(44, 4, 43);
+    transition: .3s;
+    cursor: pointer;
+    width: 30%;
+  }
+  
+  .button:hover {
+    box-shadow: 0 0 10px 0px black;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #490f54;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  @media only screen and (max-width: 600px) {
+     /* Ajusta o tamanho da fonte para 14px */
+     body {
+      font-size: 14px;
+    }
+  
+    /* Ajusta o espaçamento de parágrafos e cabeçalhos para 1.5x o tamanho da fonte */
+    p, h1, h2, h3 {
+      line-height: 1.5;
+      margin-bottom: 1.5em;
+    }
+    .container {
+      width: 90%;
+    }
+  
+    form {
+      padding: 10px;
+      width: 90%;
+    }
+  
+    input, select, textarea {
+      font-size: 12px;
+      width: 80%;
+    }
+    .button {
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 4px;
+      word-spacing: 8px;
+      font-weight: 700;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+      background-color: coral;
+      transition: .3s;
+      cursor: pointer;
+      width: 40%;
+    }
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      font-size: 10px;
+      width: 100%;
+    }
+  }
+  
