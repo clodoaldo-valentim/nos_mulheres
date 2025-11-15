@@ -1,14 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nós Mulheres – Home</title>
+
+    <!-- Estilo da Home -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(to bottom, #5a0031, #d47aa0);
+            color: #fff;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(3px);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        header span {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero img {
+            width: 180px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Botões */
+        .botoes {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .botao {
+            background-color: #ffffff;
+            color: #5a0031;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .botao:hover {
+            background-color: #ffbad8;
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(3px);
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px){
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            .botao {
+                width: 80%;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Nós Mulheres</h1>
-    <p>
-        jhgj fhf fhfh gjjg dgdgdg dgd.
-    </p>
+
+    <header>
+        <h1>Nós Mulheres</h1>
+        <span>Cadastro e consulta de mulheres indígenas</span>
+    </header>
+
+    <section class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/7650/7650535.png" alt="Ícone indígena">
+
+        <h2>Bem-vindas ao Projeto Nós Mulheres</h2>
+
+        <p>
+            Este espaço foi criado para valorizar, proteger e dar visibilidade às mulheres indígenas.
+            Aqui você pode cadastrar histórias, informações e dados importantes que fortalecem
+            a identidade e a representatividade dos povos originários.
+        </p>
+
+        <div class="botoes">
+            <a href="cadastro.html" class="botao">Cadastrar Mulher</a>
+            <a href="consulta.html" class="botao">Consultar Dados</a>
+            <a href="#" class="botao">Sobre o Projeto</a>
+        </div>
+    </section>
+
+    <footer>
+        Projeto Nós Mulheres • 2025 • Honrando a força das mulheres indígenas
+    </footer>
+
 </body>
 </html>
